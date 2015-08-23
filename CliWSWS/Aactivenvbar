@@ -1,0 +1,23 @@
+
+
+A very elegant way is to use ng-controller to run a single controller outside of the ng-view:
+
+<div class="collapse navbar-collapse" ng-controller="HeaderController">
+    <ul class="nav navbar-nav">
+        <li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
+        <li ng-class="{ active: isActive('/dogs')}"><a href="/dogs">Dogs</a></li>
+        <li ng-class="{ active: isActive('/cats')}"><a href="/cats">Cats</a></li>
+    </ul>
+</div>
+<div ng-view></div>
+
+and include in controllers.js:
+
+function HeaderController($scope, $location) 
+{ 
+    $scope.isActive = function (viewLocation) { 
+        return viewLocation === $location.path();
+    };
+}
+
+http://stackoverflow.com/questions/16199418/how-do-i-implement-the-bootstrap-navbar-active-class-with-angular-js

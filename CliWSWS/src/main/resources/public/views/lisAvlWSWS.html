@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<head>  </head>
+<body>
+<table class="table table-hover">
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            KnownWebService
+        </th>
+    </tr>
+    
+    <tr ng-repeat="kWebServ in wswsAvlLis">
+        <td>{{$index+1}}</td>
+        <td>
+            {{kWebServ.wsName}}
+        </td>
+    </tr>
+</table>
+</body>
+</html>

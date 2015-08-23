@@ -1,0 +1,34 @@
+New App:
+$routeProvider.when('/testUpLoadFile', { 
+		templateUrl: 'views/upLoadFile.html ,
+        controller: 'upLoadFileCtlr'  
+    });
+	
+upLoadFile.html	
+upLoadFile.js	
+
+Names Inside html and js :	upLoadFileApp upLoadFileCtlr
+for main application add:
+var wsAngApp = angular.module('track_wsws', [
+    'ngCookies',
+    'ngResource',
+    'ngSanitize',
+    'ngRoute',
+    'ui.bootstrap' ,
+    'xConfirmModalModule',
+    'xModalForm3',
+	'upLoadFileApp'			<===
+]);
+
+Index.html startup add in the header:
+<script src="scripts/upLoadFile.js"></script>
+
+Add button to test view TestModalForm3.html where you have another testing app
+<button class="btn btn-default" ng-click="testFileUpLoad()">Test My ModalForm3 !</button>
+    We Are Teting the UpLoadFile.......
+	
+Add action the controller  TestModalForm3 to rediredt the buuton to the confif path '/testUpLoadFile':
+ $scope.testFileUpLoad = function () {  
+	 $location.path('/testUpLoadFile'); 
+ }
+ 

@@ -1,0 +1,22 @@
+<html ng-app="paginatingAppTest">
+
+ <head>
+ <!--    <script src="scripts/paginationTesting1.js"></script> --> 
+  
+  </head>
+    <h3> **	PaginationTesting-1	** </h3>
+  <body>
+  <div ng-controller="paginationTestCtlr">
+    <ul>
+        <li ng-repeat="item in data1 | startFrom1:currentPage*pageSize | limitTo:pageSize">
+            {{item}}
+        </li>
+    </ul>
+    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPages()}}
+    <button ng-disabled="currentPage >= data1.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
+</div>

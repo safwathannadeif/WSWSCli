@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>  </head>
+<body>
+<!-- ng Solution to import htm files since html not support import yet   -->
+ <div class="container">
+  <div ng-include="'views/ModalForm3.htm'"></div>  
+
+<table class="table table-hover">
+    <tr>
+ 
+        <th>
+            WebServiceName
+        </th>
+        <th>
+            ProcessMode
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            AddIt
+        </th>
+    </tr>
+    <tr class="{selected: kWebServ.doIt}" ng-repeat="kWebServ in wswsPreTestLis">
+ <!--  <tr class="{selected: kWebServ.doIt}" ng-repeat="kWebServ in wswsPreTestLis"> -->
+<!--  <td>{{$index+1}}</td> -->
+<!-- <td> -->
+<!--  <input type="text" ng-model="kWebServ.wsName" maxlength="150" size="40"><br> -->
+<!--   </td> -->
+	 <tr  ng-repeat="kWebServ in wswsPreTestLis"> 
+        <td>
+            {{kWebServ.wsName}} 
+        </td>
+        <td>
+            {{kWebServ.processMode}}
+        </td>
+        <td>
+            {{kWebServ.description}}
+        </td>
+        <td>
+            <input type="checkbox" ng-change="addTorun(kWebServ)"  ng-model="kWebServ.doIt">
+        </td>
+    </tr>
+</table>
+<!--  
+<button ng-click="runTest()" ng-disabled="buttonIsDisabled" ng-model="buttonIsDisabled">RunTest</button>
+-->
+</body>
+</html>
+<td>

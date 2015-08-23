@@ -1,0 +1,116 @@
+<!-- paginationSpinnerTest.html paginationSpinnerTest.js paginationSpinnerTestCtlr dataAry --> 
+<html ng-app="'track_wsws'"  ng-controller="paginationSpinnerTestCtlr" >
+
+ <head>
+ <center>
+<h8> PaginationSpinnerTesting  <span class="dbTab"></span> <span class="dbTab"></span>	 <a ng-href=''  ng-click='testSpinnerPagination()' > LoadAndTest </a> </h8>
+<h8> PaginationSpinnerTesting  <span class="dbTab"></span> <span class="dbTab"></span>	 <a ng-href=''  ng-click='testHttpSpinnerPagination()' >HTTP LoadAndTest </a> </h8>
+<!-- doTestspin2 -->
+<h8> PaginationSpinnerTesting  <span class="dbTab"></span> <span class="dbTab"></span>	 <a ng-href=''  ng-click='doTestspin2()' >doTestspin2</a> </h8>
+
+</center>
+</head>
+
+<body>
+  <a class="pos_topRightFixed"  ng-href='#/unitTesting' ng-click='refreshUnitTest("testAll")' > BackToUnitTest </a> 
+  
+<div  ng-switch on="PagSpinloadStatuse">		<!--Start ng-switch on loadStatuse -->
+<div ng-switch-when="loadDone"> 		<!--Start ng-switch loadDone -->
+ <div ng-app="track_wsws" ng-controller="UnitTestingCtlr" ng-model="dataAry" >
+   <table class="table table-hover">
+   <tr>
+        <th>
+           Name
+        </th>
+        <th>
+            Value
+        </th>
+        <th>
+            Doit
+        </th>
+        <th>
+            Price
+        </th>
+        
+    </tr>
+    
+        <tr ng-repeat="oPart in dataAry | startFrom2:currentPage*pageSize | limitTo:pageSize"><!-- "name":"name0","value":"value0","doit":false,"price":0} --> 
+            <td>{{oPart.name}} </td>
+            <td>{{oPart.value}}</td>
+            <td>{{oPart.doit}}</td>
+             <td>{{oPart.price}}</td>
+        </tr>
+    </Table>
+    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPagesForDataAry()}}
+    <button ng-disabled="currentPage >= data2.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
+    </div>
+    
+    </div>
+ <!--  </div> -->		 		<!--End ng-switch on loadStatuse --> 
+ <!-- HttploadDone -------- -->
+ <div ng-switch-when="HttploadDone"> 		<!--Start ng-switch loadDone -->
+ <div ng-app="track_wsws" ng-controller="UnitTestingCtlr" ng-model="dataAry" >
+   <table class="table table-hover">
+   <tr>
+        <th>
+           firstName
+        </th>
+        <th>
+            lastName
+        </th>
+        <th>
+            tel
+        </th>
+        <th>
+            address
+        </th>
+        <th>
+            city
+        </th>
+        <th>
+            state
+        </th>
+         <th>
+            zip
+        </th>
+        
+    </tr>
+    
+        <tr ng-repeat="oPart in dataAry | startFrom2:currentPage*pageSize | limitTo:pageSize"><!-- "name":"name0","value":"value0","doit":false,"price":0} --> 
+            <td>{{oPart.fname}} </td>
+            <td>{{oPart.lname}}</td>
+            <td>{{oPart.tel}}</td>
+            <td>{{oPart.address}}</td>
+            <td>{{oPart.city}}</td>
+            <td>{{oPart.state}}</td>
+            <td>{{oPart.zip}}</td>
+        </tr>
+    </Table>
+    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPagesForDataAry()}}
+    <button ng-disabled="currentPage >= data2.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
+    </div>
+ </div>  		
+ <!-- HttploadDone-------- -->
+</div>  		<!--end ng-switch loadDone -->   
+</div>  		  
+</body>
+
+</html>
+
+<!--  'fname': '{firstName}',
+	                'lname': '{lastName}',
+	                'tel': '{phone|format}',
+	                'address' : '{address}',
+	                'state' : '{state}' ,
+	                'city'  : '{city}'
+-->	           

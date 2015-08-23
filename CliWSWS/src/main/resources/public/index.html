@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html ng-app=track_wsws>
+<head>
+<title>WSWS</title>
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/LoadingStyle.css">
+<link rel="stylesheet" href="/css/wsws.css" >
+</head>
+<body>
+<ul class="nav nav-pills" bs-active-link>    
+
+
+   
+  <!--  <div class="navbar navbar-default" ng-controller="HeaderController">
+  		<ul class="nav navbar-nav">  <ul class="nav nav-pills" bs-active-link> 
+        <li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
+        <li ng-class="{ active: isActive('/lisAvlWSWS') }"><a href="#/lisAvlWSWS">ListWSW</a></li>
+        <li ng-class="{ active: isActive('/tst') }"><a href="#/tst">Test</a></li>
+        <li ng-class="{ active: isActive('/preWSWSTest') }"><a href="#/preWSWSTest">PreTesting</a></li>
+        <li ng-class="{ active: isActive('/pickerRef') }"><a href="#/pickerRef">Picker</a></li>
+        <li ng-class="{ active: isActive('/servTest2') }"><a href="#/servTest2">Test2</a></li>
+        
+          <li><a href="#/servTest3">TestModalForm3</a></li>
+          <script src="scripts/TestConfirmModal.js"></script>
+             <script src="scripts/xConfirmModal.js"></script>
+               <li><a href="#/servTest2">TestxConfirmModal</a></li>
+               <script src="scripts/xSharedItems.js"></script>
+    </ul>
+     
+    -->   
+<div class="navbar navbar-default" >
+<div class="navbar-header">
+<a class="navbar-brand" href="#">WSWS-Tracker</a>
+</div>
+      <ul class="nav nav-pills" bs-active-link>  <!-- Using  directive('bsActiveLink') from main wsAngApp.js-->
+      <li><a href="/">Home</a></li>
+        <li><a href="#/lisAvlWSWS">ListWSW</a></li>
+        <li><a href="#/tst">Test</a></li>
+        <li><a href="#/runWSWSTest">RunTesting</a></li>
+        <li><a href="#/pickerRef">Picker</a></li>
+        
+        
+         <li><a href="#/unitTesting">UnitTesting</a></li>
+    
+</div>
+
+ <div class="container" ng-view=""> 
+ 
+ 				<!-- Include Templates Like Modals Views Try again ?? Not Working 
+				<div ng-include="'views/ModalForm3.htm'"></div>
+							 -->
+	
+</div>
+
+	<!--  <script src="/js/jquery.js"></script> 
+	<script src="/js/angular-starp.min.js"></script>
+	<script src="/js/angular-strap.tpl.min.js"></script>
+	-->
+	<script src="/js/angular.js"></script>
+	<script src="/js/angular-route.js"></script>
+	<script src="/js/angular-cookies.js"></script>
+	<script src="/js/angular-sanitize.js"></script>
+	<script src="/js/angular-resource.js"></script>
+	<script src="/js/ui-bootstrap-tpls-0.9.0.min.js"></script>
+	
+	<!-- Local-App wsAngApp  -->
+	<script src="scripts/wsAngApp.js"></script>
+	
+	<script src="scripts/spinModalService.js"></script>
+	
+	<script src="scripts/lisAvlWSWSCtrl.js"></script>
+	<script src="scripts/runWSWSTestCtlr.js"></script>
+	<script src="scripts/picker.js"></script>
+	<script src="scripts/tstCtrl.js"></script>
+			
+	<script src="scripts/UnitTesting.js"></script>
+ 	<script src="scripts/ModalForm3.js"></script>
+ 	<script src="scripts/upLoadFile.js"></script>
+ 	<script src="scripts/paginationTesting1.js"></script>
+ 	<script src="scripts/testSpinModal.js"></script>
+ 	<script src="scripts/spinnerFactory.js"></script> 
+ 	
+ 	<script src="scripts/TestAlertConfirm.js"></script> 
+    <script src="scripts/unitTestServcFuns.js"></script>
+ 	
+	<!-- 		-->
+
+	<!-- Local-App wsAngApp  -->
+<div class="container">
+<div ng-include="'views/ShowBlockSpinner.html'"></div>
+</div>
+<div id="loadingWidget"  scope-for-spinner  >
+       
+</div>
+        
+</body>
+</html>

@@ -1,0 +1,7 @@
+<!-- ng Solution to import html files since html not support import yet -->
+ <div class="container">
+<div ng-include="'views/xConfirmModalView.htm'"></div>
+</div>
+/**
+ * 
+ */

@@ -1,0 +1,62 @@
+<!doctype html>
+<html ng-app="track_wsws">
+  <head>
+    <script src="scripts/TestConfirmModal.js"></script> 
+	<script src="scripts/xConfirmModal.js"></script> 
+	
+    <!--
+	 Remove and replace ui-bootstarp-tpls.090 with  i-bootstrap-tpls-0.9.0.min.js
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.js"></script>
+	<script src="angular-route.1.2.4.js"></script> 
+	<script src="http://code.angularjs.org/1.2.4/angular-route.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.7.0.js"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+	<!-- **** Ref is C:\root_pf\AngulaerJS\Modal1\example3.js and C:\root_pf\AngulaerJS\Modal1\index3.html *** 
+    <style>
+      .left-nav,.right-nav{
+         float:left; 
+      }
+      .right-nav{
+        margin-left:20px;
+      }
+      a{
+        cursor:pointer; 
+      }
+    </style>
+	-->
+  </head>
+  <body>
+ 
+-->
+<!-- ng Solution to import html files since html not support import yet -->
+ <div class="container">
+<div ng-include="'views/xConfirmModalView.htm'"></div>
+</div>
+<div ng-app="track_wsws" ng-controller="testCtlr2">
+<table class="table table-hover">
+    <tr>
+        <th>
+            #
+        </th>
+        <th>
+            String
+        </th>
+    </tr>
+    
+    <tr ng-repeat="strIn in strsLis">
+        <td>{{$index+1}}</td>
+        <td>
+            {{strIn}}
+        </td>
+    </tr>
+</table>
+
+
+
+    <button class="btn btn-default" ng-click="openConfirm()">Test My Confirmation me!</button>
+    We Are Testing the Confirmation ....
+    <button class="btn btn-default" ng-click="toggleAnimation()">Toggle Animation ({{ animationsEnabled }})</button>
+    <div ng-show="selected">Selection from a modal: {{ selected }}</div>
+</div>
+  </body>
+</html>

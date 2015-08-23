@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app=track_wsws>
+<head>
+<title>WSWS</title>
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<!--  HTML
+<ul class="nav navbar-nav" bs-active-link>
+  		<li><a href="/home">Home</a></li>
+  		<li><a href="/contact">Contact</a></li>
+		</ul>
+ -->
+	<nav class="navbar navbar-default" role="navigation" bs-navbar>
+	
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">WSWS-Tracker</a>
+		</div>
+		<ul class="nav navbar-nav">
+		
+			<li data-match-route="/$"><a href="#/">Home</a></li>
+			<li data-match-route="/lisAvlWSWS"><a href="#/lisAvlWSWS">ListWSW</a></li>
+			<li data-match-route="/tst"><a href="#/tst">Test</a></li>
+			<li data-match-route="/preWSWSTest"><a href="#/preWSWSTest">PreTesting</a></li>
+			<li data-match-route="/pickerRef"><a href="#/pickerRef">Picker</a></li>
+			<li data-match-route="/servTest2"><a href="#/servTest2">Test2</a></li>  
+			
+		</ul>
+	</nav>
+
+	<div class="container" ng-view=""></div>
+
+	<!--  <script src="/js/jquery.js"></script> -->
+	<script src="/js/angular.js"></script>
+	<script src="/js/angular-route.js"></script>
+	<script src="/js/angular-cookies.js"></script>
+	<script src="/js/angular-sanitize.js"></script>
+	<script src="/js/angular-resource.js"></script>
+	<script src="/js/ui-bootstrap-tpls-0.9.0.min.js"></script>
+	<script src="/js/angular-strap.min.js"></script>
+	<script src="/js/angular-strap.tpl.min.js"></script>
+	<!-- Local-App wsAngApp  -->
+	<script src="scripts/wsAngApp.js"></script>
+	<script src="scripts/lisAvlWSWSCtrl.js"></script>
+	<script src="scripts/preWSWSTestCtlr.js"></script>
+	<script src="scripts/picker.js"></script>
+	<script src="scripts/tstCtrl.js"></script>
+	<script src="scripts/xSharedItems.js"></script>
+	
+	<script src="scripts/TestConfirmModal.js"></script>
+	<script src="scripts/xConfirmModal.js"></script>
+	<!-- Local-App wsAngApp  -->
+
+</body>
+</html>

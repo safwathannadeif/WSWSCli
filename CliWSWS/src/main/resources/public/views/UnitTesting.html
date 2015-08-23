@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="track_wsws">
+ <head>
+ 
+</head>
+<body>
+
+ <!-- #1 ng Solution to import htm files since html not support import yet -->
+ <div class="container">				<!--  [ container -->
+<div ng-include="'views/ModalForm3.htm'"></div>
+</div>									<!--   container ] -->
+<!-- #1  -->
+<div ng-app="track_wsws" ng-controller="UnitTestingCtlr">		<!-- [  App and Controller -->
+<!-- CHG here to th end  -->
+<div  ng-switch on="actView">		<!--Start ng-switchon ="actView" 20 -->
+ <!-- ng-switch-when* #21 -->
+<div ng-switch-when="testAll"> 				<!--Start ng-switch-when testAll* #21 -->
+<table>
+<tr><td class="leftAlign"><a ng-href='' ng-click='openModalForm3()' >  ModalForm3ForWSWS </a></td>      <td><span class="dbTab"></span></td>   <td class="leftAlign">Test The ModalForm3</td>	</tr>
+<tr><td class="leftAlign"><a ng-href='' ng-click='testFileUpLoad()' >  UploadAndDisplay </a></td>       <td><span class="dbTab"></span></td>   <td class="leftAlign">Test  FileUplooad,read and display in new window</td>	</tr>
+<tr><td class="leftAlign"><a ng-href='' ng-click='testPagination1()' > Pagination Testing-1 </a></td>   <td><span class="dbTab"></span></td>   <td class="leftAlign">Test  Pagination Testing-1 Version#1</td>	</tr>
+<tr><td class="leftAlign"><a ng-href='' ng-click='testSpinModal()' > SpinnerAndTimer </a></td>          <td><span class="dbTab"></span></td>   <td class="leftAlign">Test  Spinner Modal Time-out Counter</td>	</tr>
+<tr><td class="leftAlign"><a ng-href='' ng-click='testAlertConfirm()' > AlertMesgWithConfirmation </a>  <td><span class="dbTab"></span></td>   <td class="leftAlign">Test  Alert Message(s) With the Default Colors </td>	</tr>
+<tr><td class="leftAlign"><a ng-href='' ng-click='tablePagination2()' > PaginationV2 </a>               <td><span class="dbTab"></span></td>   <td class="leftAlign">Test  Pagination Vesrion2  </td>	</tr>
+<tr><td class="leftAlign"><a ng-href='' ng-click='paginationSpinner()' > PaginationSpinner </a>         <td><span class="dbTab"></span></td>   <td class="leftAlign">Test  Pagination and Spinner with HTTP Request </td>	</tr>
+
+</table>
+   
+</div> 										<!-- End ng-switch-when="testAll" #21 -->
+
+<div ng-switch-when="tablePagination2"> 			<!--Start ng-switch-when tablePagination2** #22 -->
+<div ng-include="'views/paginationTesting2.html'">	<!--Start include views/paginationTesting2.html -->
+</div> 												<!--End include views/paginationTesting2.html -->
+
+</div>												<!--End ng-switch-when tablePagination2** #22 -->	
+																						
+<div ng-switch-when="paginationSpinner"> 			<!--Start ng-switch-when paginationSpinner** #23 -->
+<div ng-include="'views/paginationSpinnerTest.html'"> -->	<!--Start include views/paginationSpinnerTest.html -->
+</div>
+
+</div>					<!--End ng-switch-when paginationSpinnerTest** #22 -->			
+   
+</div> 			<!--End ng-switch on ="actView" 20 -->											
+
+ </div> 				<!--   App and Controller ] -->
+ <!--   paginationSpinner[ paginationSpinnerTest.html ] -->
+ 	
+</body>
+</html>
+

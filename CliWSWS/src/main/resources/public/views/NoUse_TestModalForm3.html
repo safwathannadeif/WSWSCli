@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="track_wsws">
+ <head>
+
+<script src="scripts/TestModalForm3.js"></script> 
+<script src="scripts/Modalform3.js"></script> 
+  <!-- 
+<script src="angular.js"></script>
+<script src="jquery.js"></script>
+<script src="angular-route.js"></script>
+<script src="angular-cookies.js"></script>
+<script src="angular-sanitize.js"></script>
+<script src="angular-resource.js"></script>
+<script src="ui-bootstrap-tpls-0.9.0.min.js"></script> 				
+<script src="TestModalForm3.js"></script> 
+<script src="Modalform3.js"></script> 
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="main.css">
+<script src="scripts/TestModalForm3.js"></script> 
+<script src="scripts/Modalform3.js"></script> 
+-->
+</head>
+<body>
+<html ng-app="track_wsws">  <!-- //TestModalForm3  TestModalForm3Ctlr  -->
+
+ <!-- ng Solution to import htm files since html not support import yet -->
+ 
+ <div class="container">
+<div ng-include="'views/ModalForm3.htm'"></div>
+</div>
+
+<div ng-app="track_wsws" ng-controller="TestModalForm3Ctlr"> 
+    <button class="btn btn-default" ng-click="openModalForm3()">Test My ModalForm3 !</button>
+    We Are Teting the Modalform3 ....
+    <button class="btn btn-default" ng-click="testFileUpLoad()">Test My ModalForm3 !</button>
+    We Are Teting the UpLoadFile.......
+     <button class="btn btn-default" ng-click="testPagination()">Pagination Testing !</button>
+    We Are Teting the UpLoadFile.......
+    <!-- TodoController -->
+    
+</div>
+  </body>
+</html>

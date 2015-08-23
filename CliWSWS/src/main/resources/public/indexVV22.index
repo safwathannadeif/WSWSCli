@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app=track_wsws>
+<head>
+<title>WSWS</title>
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<!--  
+	<nav class="navbar navbar-default" role="navigation" bs-navbar>
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">WSWS-Tracker</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li ng-class="{ active: isActive('/') }"><a href="#/">Home</a></li>
+			<li ng-class="{ active: isActive('/lisAvlWSWS') }"><a href="#/lisAvlWSWS">ListWSW</a></li>
+			<li ng-class="{ active: isActive('/tst') }"><a href="#/tst">Test</a></li>
+			<li ng-class="{ active: isActive('/preWSWSTest') }"><a href="#/preWSWSTest">PreTesting</a></li>
+			<li ng-class="{ active: isActive('/pickerRef') }"><a href="#/pickerRef">Picker</a></li>
+			<li ng-class="{ active: isActive('/servTest2') }"><a href="#/servTest2">Test2</a></li>  
+		</ul>
+
+
+		</ul>
+	</nav>
+	<div class="collapse navbar-collapse" ng-controller="HeaderController">
+-->
+<div class="navbar navbar-default" ng-controller="HeaderController">
+    <ul class="nav navbar-nav">
+        <li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
+        <li ng-class="{ active: isActive('/lisAvlWSWS') }"><a href="#/lisAvlWSWS">ListWSW</a></li>
+        <li ng-class="{ active: isActive('/tst') }"><a href="#/tst">Test</a></li>
+        <li ng-class="{ active: isActive('/preWSWSTest') }"><a href="#/preWSWSTest">PreTesting</a></li>
+        <li ng-class="{ active: isActive('/pickerRef') }"><a href="#/pickerRef">Picker</a></li>
+        <li ng-class="{ active: isActive('/servTest2') }"><a href="#/servTest2">Test2</a></li>
+    </ul>
+</div>
+
+	<div class="container" ng-view=""></div>
+
+	<!--  <script src="/js/jquery.js"></script> 
+	<script src="/js/angular-starp.min.js"></script>
+	<script src="/js/angular-strap.tpl.min.js"></script>
+	-->
+	<script src="/js/angular.js"></script>
+	<script src="/js/angular-route.js"></script>
+	<script src="/js/angular-cookies.js"></script>
+	<script src="/js/angular-sanitize.js"></script>
+	<script src="/js/angular-resource.js"></script>
+	<script src="/js/ui-bootstrap-tpls-0.9.0.min.js"></script>
+	
+	<!-- Local-App wsAngApp  -->
+	<script src="/scripts/wsAngApp.js"></script>
+	<script src="scripts/lisAvlWSWSCtrl.js"></script>
+	<script src="scripts/preWSWSTestCtlr.js"></script>
+	<script src="scripts/picker.js"></script>
+	<script src="scripts/tstCtrl.js"></script>
+	<script src="scripts/xSharedItems.js"></script>
+	
+	<script src="scripts/TestConfirmModal.js"></script>
+	<script src="scripts/xConfirmModal.js"></script>
+	<!-- Local-App wsAngApp  -->
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Used by main html init loader file in this case its loaded by TestConfirmModal.html -->
+<!- xConfirmModal.js and this file xConfirmModalView.htm are the mian resuseable component for Yes/No Confirm -->
+<!-- ngswitch https://docs.angularjs.org/api/ng/directive/ngSwitch -->
+<html ng-app="">
+
+<!--  wsId:4, wsName:"makeOneASyncrEmpWS", doIt:false, processMode:"Asynchronous", description:"Asynchronous Employees Webservice Example", doForm:false, wsRunMemorizedId:""}) -->
+<script type="text/ng-template" id="myModalFormContent.html"> 
+   <!--     <div class="modal-header"  ng-app="xModalForm3"  >
+            <h3 class="modal-title" ng-model="formItems.title" /></h3>
+        </div>
+    -->
+<div class="modal-body">
+<center> <h3><strong> {{formItems.title}}</<strong></h3> </center>
+
+<form  class="form-horizontal" name="xForm1" ng-submit="submitForm(xForm1.$valid)" novalidate> 
+<!-- WebServiceName --> 
+<div class="form-group">
+    <label for="WebServiceName"  class="col-sm-2 control-label">ServiceName</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control"  id="WebServiceName" ng-readonly="true" ng-model="formItems.wsName" /> 
+    </div>
+  </div>
+ <!-- WebServiceName --> 
+<!--  WebServiceType -->	      
+<div class="form-group">
+<label for="WebServiceType" class="col-sm-2 control-label">ServiceType</label>
+<div class="col-sm-10">
+<input type="text" id="WebServiceType"  ng-readonly="true" class="form-control" ng-model="formItems.processMode" /> 
+</div>
+</div>
+<!--  WebServiceType -->
+<!--  Description -->
+<div class="form-group">
+<label for="Description" class="col-sm-2 control-label">Description</label>
+<div class="col-sm-10">
+<input type="text" id="Description"  ng-readonly="true" class="form-control" ng-model="formItems.description" /> 
+</div>
+</div>
+<!--  Description -->
+<!--  runId -->
+
+<!--	Use Ternary operators: -->
+<div class="EditOrDelete"  ng-switch on="formItems.form3WorkType">
+
+
+<div class="EditAction" ng-switch-when="Edit">
+<div class="form-group">
+<label for="wsRunMemorizedId" class="col-sm-2 control-label">wsRunId</label>
+<div class="col-sm-10">
+<input type="text" id="runId" class="form-control"   ng-model="formItems.runId" required ng-minlength="8" ng-maxlength="16"  placeholder="Enter mmemorized run id[8-16Chars]">	<!-- required Implied from minleng/maxlen --> </div>
+<!-- <span class="help-block">Enter a 8-16 Chars for memorizedId</span> -->
+<p ng-show="xForm1.runId.$error.minlength" class="help-block">id is too short.</p>
+<p ng-show="xForm1.runId.$error.maxlength" class="help-block">id is too long.</p>
+</div>
+
+<!--  runId -->	
+<!-- SUBMIT AND CANCCEL  BUTTONs-->
+
+<center>
+<div class="form-group">
+<button type="submit"  ng-click="save()" class="btn btn-primary" ng-disabled="xForm1.$invalid"  pull-right>Save</button> 
+ 
+<button type="submit" ng-click="cancel()" class="btn btn-primary"   pull-right>Cancel</button>
+</div>
+</center>
+<!-- SUBMIT AND CANCEL  BUTTONs-->
+</div>  <!-- class="EditAction" ng-switch-when="Add|Edit" --> 
+
+<div class="DeleteAction" ng-switch-when="Delete">
+<div class="form-group">
+<label for="wsRunMemorizedId" class="col-sm-2 control-label">wsRunId</label>
+<div class="col-sm-10">
+<input type="text" id="runId" class="form-control"   ng-model="formItems.runId" ng-readonly="true" >	
+</div>
+<!-- Confirm or CANCEL  BUTTONs-->
+<br> </br> <br> </br>
+<center>
+<div class="form-group">
+<button type="submit"   ng-click="save()" class="btn btn-primary"   pull-right>Confirm</button> 
+ 
+<button type="submit" ng-click="cancel()" class="btn btn-primary"   pull-right>Cancel</button>
+</div>
+</center>
+<!-- SUBMIT AND CANCEL  BUTTONs-->
+</div>  <!-- class="EditAction" ng-switch-when="Edit" -->
+</div>    <!-- EditOrDelete -->    
+ </form>   
+  
+</div>		  
+</script>
+

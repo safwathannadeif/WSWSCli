@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--   testSpinModal.html , testSpinModal.js ,  testSpinModalApp , testSpinModalCtlr testSpinModal() 
+* spinModalService.js , spinModalServiceApp, spinnnerService ,startSpin(), endSpin()  				*/ -->
+<html ng-app="testSpinModalApp"  >
+<head>
+ 
+
+	  <script src="scripts/testSpinModal.js"></script>
+	 
+   
+   
+ </head>
+<body>
+<div class="container">
+<div ng-include="'views/ShowBlockSpinner.html'"></div>
+</div>
+
+ <div ng-controller="testSpinModalCtlr"> 
+  TestTime (between 1 and 3000):
+  <input type="number" name="TestTimeOut" min="1" max="3000" ng-model="testTimeout">
+  </br>
+  
+ <button class="btn btn-default"  ng-click="testSpinModal()">testSpinModal</button>
+ </br>
+ <button class="btn btn-default"  ng-click="testHttpWithSpin()">testHttpWithSpinModal</button>
+ <!-- Thanks to http://www.filltext.com/:
+ "fname": "Alfonso", "lname": "Zuniga","tel": "(502)014-7820", "address": "1332 Ac Ct", "city": "Saint Pauls", "state": "AZ", "zip": 70663 -->
+  
+  <button class="btn btn-default"  ng-click="testSpinFactory()">testNo1SpinFactory</button>
+   
+</div>
+</body>
+
+</html>
+<!-- error Captured on 10Jun2015
+Error: [$injector:cdep] Circular dependency found: $modal <- spinnnerService <- $http <- $compile
+http://errors.angularjs.org/1.2.15-build.2399+sha.ca4ddfa/$injector/cdep?p0=%24modal%20%3C-%20spinnnerService%20%3C-%20%24http%20%3C-%20%24compile
+file:///C:/root_pf/AngulaerJS/SpinnerV2/angular.js
+Line 78
+--->

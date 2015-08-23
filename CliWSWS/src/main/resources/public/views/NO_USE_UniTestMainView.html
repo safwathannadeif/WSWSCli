@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div ng-app="track_wsws" ng-controller="UnitTestingCtlr">
+
+
+
+<div class="outer" ng-switch on ="actView">
+ <!-- 1 -->
+<div ng-switch-when="testAll"> 
+    <button class="btn btn-default" ng-click="openModalForm3()">Test My ModalForm3 !</button>
+    We Are Teting the Modalform3 CRUD for wsws.... </br>
+    <button class="btn btn-default" ng-click="testFileUpLoad()">Test File  Upoload !</button>
+    We Are Teting the UpLoadFile.......
+     <button class="btn btn-default" ng-click="testPagination1()">Pagination Testing-1 !</button>
+    We Are Teting the UpLoadFile.......
+    <!-- TodoController -->
+     </br>
+    <button class="btn btn-default" ng-click="testSpinModal()">SpinnnerModalTesting !</button>
+    We Are Teting the Spinner Modal.......
+    </br>
+    <!--   TsetAlertConfirm.html TestAlertApp TestAlertCtrl when '/testAlertConfirm'  -->
+     <button class="btn btn-default" ng-click="testAlertConfirm()">AlertConfirmTesting !</button>
+    
+      <button class="btn btn-default" ng-click="tablePagination2()">tablePagination2!</button>
+ 
+ </div>
+  <!-- 1 -->
+ <!-- 2 -->
+        <div ng-switch-when="tablePagination2"> <div ng-include="'views/paginationTesting2.html'">
+ </div> </div>
+  <!-- 2 -->   
+</div> 
+
+ </div> 
+ 	
+</body>
+</html>
+<!-- script type="text/ng-template" id="UniTestMainView.html"></script> -->
+
+	

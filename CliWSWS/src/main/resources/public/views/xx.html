@@ -1,0 +1,17 @@
+<html ng-app="">
+<script type="text/ng-template" id="ShowBlockSpinner.html"> 
+<dev class="modal-body">
+<dev ng-model="timeOutE" ng-show="!timeOutE" class="ng-hide" >
+<center>
+<dev><img src="spin.gif" width="20" height="20" /></dev>
+</br>
+<input type="text"  size=38  ng-readonly="true" ng-model="runningWhat"  />
+</center>
+</br>
+<input type="text" size="8" ng-readonly="true" ng-model="disply"  />
+</dev>
+<alert ng-repeat="alert in alertMsgs"  close="closeAlert($index)">{{alert.msg}}</alert> 
+</dev>	  
+</script>
+</html>
+

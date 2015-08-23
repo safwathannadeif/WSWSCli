@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- Used by main html init loader file in this case its loaded by TestConfirmModal.html -->
+<!- xConfirmModal.js and this file xConfirmModalView.htm are the mian resuseable component for Yes/No Confirm -->
+<html ng-app="">
+<script type="text/ng-template" id="xConfirmModalContent.html" > 
+       <div class="modal-header" ng-app="xConfirmModalModule"  >
+            <h4 class="modal-title"> Confirmation Required </h4>  
+        </div>
+        <div class="modal-body">
+		   <strong>  {{confirmModel.header}} </strong> 
+           <strong> item: {{confirmModel.targetItem}} </strong> 
+		   <br> 
+		    <strong>  {{confirmModel.msg}} </strong> 
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+ </script>

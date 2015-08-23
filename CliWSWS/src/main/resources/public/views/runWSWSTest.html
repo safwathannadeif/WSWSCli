@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html >
+<head>  </head>
+<body>
+<center-justified >
+<strong>
+<button ng-click="runTheTest()"  ng-disabled="isRun()"  ng-mode="isRun">RunTest</button> 
+<button ng-click="addTest()"  >Add+</button> 
+</strong>
+</center-justified >
+<table class="table table-hover">
+    <tr>
+        <th>
+            WebServiceName
+        </th>
+        <th>
+            ProcessMode
+        </th>
+        <th>
+            Description
+        </th> 
+        <th>
+       Run-Id
+       </th>
+        <th>
+            Edit
+        </th>
+        <th>
+            Delete
+        </th>
+    </tr>
+    <tr class="{selected: kWebServ.doIt}" ng-repeat="kWebServ in wswsRunTestLis">     
+<!-- <td> 
+<td>{{$index+1}}</td> -->
+<!--  <input type="text" ng-model="kWebServ.wsName" maxlength="150" size="40"><br> -->
+<!--   </td> -->
+        <td>
+            {{kWebServ.wsName}} 
+        </td>
+        <td>
+            {{kWebServ.processMode}}
+        </td>
+        <td>
+            {{kWebServ.description}}
+        </td>
+        <td>
+            {{kWebServ.runId}}
+        </td>
+        <td>
+            <input type="checkbox" ng-change="Edit(kWebServ)"  ng-model="kWebServ.action2.Edit">
+        </td>
+        <td>
+            <input type="checkbox" ng-change="Remove(kWebServ)"  ng-model="kWebServ.action2.Delete">
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
+<td>

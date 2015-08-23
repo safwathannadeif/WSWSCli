@@ -1,0 +1,35 @@
+ /*	Special styles for wsws */
+.floatoneline 
+    {  width: 100px;  
+       height: 100px;  
+ /*      border: solid 1px #ccc;  */ 
+       float: left;  
+    } 
+   
+.pos_topRightFixed {
+    position: fixed;
+    top: 55px;
+    right: 5px;
+    color: blue;
+}
+.pos_topLeffixed {
+    position: fixed;
+    top: 55px;
+    left: 1px;
+    color: red;
+}
+/*	Special db tabs  */
+span.dbTab{
+    padding: 0 160px; /* Or desired space*/
+}
+/*	Special td alignment */
+/* td {  width:300px;   font:12pt arial;}   */
+td.leftAlign {text-align:left;}
+td.rightAlign {text-align:right;}
+td.center {text-align:center;}
+td.justify {text-align:justify;}
+/*Example	*/
+/* <table> 
+/*  <tr><td class="leftAlign">Some left-aligned text11.</td>	<td class="leftAlign">Some left-aligned text12.</td>	<td class="leftAlign">Some left-aligned text13.</td>	</tr> */
+/* <tr><td class="leftAlign">Some left-aligned text21.</td>	<td class="leftAlign">Some left-aligned text22.</td>	<td class="leftAlign">Some left-aligned text23.</td>	</tr> */
+/* </table> */

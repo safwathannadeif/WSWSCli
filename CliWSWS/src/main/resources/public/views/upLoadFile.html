@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- https://uncorkedstudios.com/blog/multipartformdata-file-upload-with-angularjs -->
+<html>
+  <head>
+    <title>AngularJS Testing FileUpload </title>
+ <!-- 	<script src="upLoadFile.js"></script> -->
+  </head>
+  <body>
+
+<div ng-app="upLoadFileApp" ng-controller="upLoadFileCtlr">
+ <table>
+<tr> <td> <input type="file" file-model="myFile"/> </td></tr>
+</span>
+<tr> <td><input type="button" ng-click="resetFile()" value="ResetFile"/> </td></tr>
+</table> </br> 
+ 
+ <div  ng-switch on ="actView">		
+
+<div ng-switch-when="fileView"> 				
+<!-- <input type="button" data-ng-click="readFile(false)" value="ReadFile" />
+	</br>																			-->
+   Name:     {{theFile.name}} <br />
+   Size:     {{theFile.size}} byte(s)<br/>
+   Type:     {{theFile.type}}
+   </br> </br>
+   <a ng-href=''   ng-click='readAndDisply()' >  ReadAndDisplyTheFile </a>
+</div>
+</div>
+</div>
+</body>
+</html>

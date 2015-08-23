@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html ng-app="">
+
+<script type="text/ng-template" id="ShowBlockSpinner.html"> 
+   
+<div class="modal-body">
+<!--
+<div class="loading"  ><img src="/views/images/spin.gif" width="20" height="20" />Loading...</div>
+
+ <div ng-controller="ModalSpinnerInstanceCtlr"> 
+<!--	***For Modal doNotUse Controoler jus ng-model***-->
+<div ng-model="timeOutE" ng-show="!timeOutE" class="ng-hide" >
+<center>
+<div ><img src="/views/images/spin.gif" width="20" height="20" /></div>
+</br>
+<input type="text"  size=38  ng-readonly="true" ng-model="runningWhat"  />
+</center>
+</br>
+<input type="text" size="8" ng-readonly="true" ng-model="disply"  />
+
+</div>
+</div>
+<!--- This Part Working But................
+<div  ng-model="alertMsgs">
+   <alert ng-repeat="alert in alertMsgs" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert> 
+This Part Working But................ -->
+ <alert ng-repeat="alert in alertMsgs"  close="closeAlert($index)">{{alert.msg}}</alert> 
+</div>
+
+<!-- div ng-show="myValue" class="ng-hide"></div>
+<div ng-model="timeOutE" ng-show="timeOutE" class=""ng-hide"" style="width: 50px; height: 50px; background-color: red;"><br />
+
+<div ng-model="timeOutE" ng-show="timeOutE" class="ng-hide" >
+<input type="label"  Timeout Occured  />
+ <button class="btn btn-default"  ng-click="cancel()">Cancel</button>
+</div>	
+-->
+<!-- Use v ng-show="true or false " for time out  -->	  
+</script>
+</html>

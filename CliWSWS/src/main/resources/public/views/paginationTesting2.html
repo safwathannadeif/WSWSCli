@@ -1,0 +1,56 @@
+ 
+<html ng-app="'track_wsws'">
+
+ <head>
+ 
+  </head>
+  <body>
+
+<!--  <div>  <a class="pos_topRightFixed"  ng-href='#/unitTesting' ng-click='refreshUnitTest("testAll")' > RefreshUnitTest<span class="dbTab"></span> </a>  </div> -->
+ <div>  <a class="pos_topRightFixed"  ng-href='#/unitTesting' ng-click='refreshUnitTest("testAll")' > BackToUnitTest </a>  </div> 
+
+
+<!-- <a ng-href='#/unitTesting' ng-click='refreshUnitTest("testAll")' > RefreshUnitTest </a> </div>  -->
+<div> **PaginationTesting-2**      	
+ <div ng-app="track_wsws" ng-controller="UnitTestingCtlr" ng-model="data2" >
+<!--  <div>								<a href back-button>back</a> 
+  			   <a id="link-2" ng-href="#here" ng-click="actView=testAll">UnitTetingRefresh</a> 
+  			
+  	</div>
+-->
+   <table class="table table-hover">
+   <tr>
+        <th>
+           Name
+        </th>
+        <th>
+            Value
+        </th>
+        <th>
+            Doit
+        </th>
+        <th>
+            Price
+        </th>
+        
+    </tr>
+    
+        <tr ng-repeat="oPart in data2 | startFrom2:currentPage*pageSize | limitTo:pageSize"><!-- "name":"name0","value":"value0","doit":false,"price":0} --> 
+            <td>{{oPart.name}} </td>
+            <td>{{oPart.value}}</td>
+            <td>{{oPart.doit}}</td>
+             <td>{{oPart.price}}</td>
+        </tr>
+    </Table>
+    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPages()}}
+    <button ng-disabled="currentPage >= data2.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
+    </div>
+    
+</body>
+
+</html>
